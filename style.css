@@ -1,0 +1,371 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #8B4513; /* Barna háttér */
+    overflow: auto;
+}
+
+html {
+    scroll-behavior: smooth; /* Sima görgetés minden linkre */
+    height: auto;
+}
+
+/* Navigációs sáv */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d3c6b0; /* Hover szín */
+}
+
+/* Hamburger menü stílusai */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobil nézet */
+@media (max-width: 800px) {
+    .nav-links {
+        display: none; /* Elrejti a menüt */
+        flex-direction: column; /* Függőleges elrendezés */
+        position: absolute;
+        background-color: black;
+        top: 60px; /* Navigációs sáv alatti elhelyezkedés */
+        right: 0;
+        width: 100%; /* Teljes szélesség */
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Függőleges térköz */
+        text-align: center; /* Középre igazít */
+    }
+
+    .hamburger {
+        display: block; /* Megjeleníti a hamburger ikont mobil nézetben */
+    }
+
+    nav {
+        justify-content: space-between; /* Jobb és bal oldal elrendezése */
+    }
+
+    .logo{
+        font-size: 20px;
+        margin-right: auto;
+    }
+    
+    h2{
+        font-size: 40px !important;
+    }
+
+    .about-container p{
+        font-size: 18px !important;
+    }
+}
+
+/* Hamburger menü megjelenítése */
+.nav-active {
+    display: flex; /* Megjeleníti a menüt, ha aktív */
+}
+
+h2{
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+h3{
+    font-size: 30px;
+    color: black;
+    
+}
+
+hr.divider {
+    border: none; /* Eltávolítja az alapértelmezett vonalat */
+    height: 1px; /* A vonal vastagsága */
+    background-color: white; /* A vonal színe */
+    margin: 2px auto 10px; /* Térköz a vonal körül */
+    width: 80%;
+}
+
+/* Rólam szakasz */
+#about {
+    padding: 80px 20px; /* Térköz a navigációs sáv alatt */
+    margin-top: 60px; /* Elkerüli a navigációs sáv átfedését */
+    background-color: #5c4d4d; /* Sötétbarna háttér */
+    color: white; /* Fehér szöveg */
+}
+
+.about-container {
+    display: flex;
+    align-items: center; /* Kép és szöveg függőleges igazítása */
+    justify-content: center; /* Középre igazítás */
+    font-weight: bold;
+    gap: 10px;
+}
+
+.profile-image {
+    width: 150px; /* Kép szélessége */
+    height: 150px; /* Kép magassága */
+    border-radius: 50%; /* Kerek kép */
+    margin-right: 20px; /* Térköz a kép és a szöveg között */
+}
+
+.section-content {
+    max-width: 800px; /* Maximum szélesség */
+    margin-left: auto; /* Középre igazítás */
+    margin-right: auto; /* Középre igazítás */
+    text-align: left; /* Középre igazítás */
+}
+
+.section-content p{
+    font-size: 20px;
+}
+
+
+.education-container {
+    padding: 20px; /* Térköz a szakasz körül */
+    border-radius: 8px; /* Lekerekített sarkok */
+    margin: 20px auto; /* Felső margó a Rólam rész és a Tanulmányok rész között */
+    max-width: 800px;
+}
+
+.timeline {
+    position: relative; /* Relatív pozicionálás a gyermekelemekhez */
+    padding: 10px 0; /* Felső és alsó térköz */
+}
+
+.timeline-item {
+    margin-bottom: 20px; /* Térköz az idővonal elemei között */
+}
+
+.timeline-year {
+    font-weight: bold; /* Vastag betűs év */
+    color: black; /* Év szín */
+    font-size: 18px; /* Év betűmérete */
+}
+
+.timeline-content {
+    padding-left: 20px; /* Bal oldali térköz a tartalomhoz */
+    border-left: 2px solid black; /* Bal oldali vonal */
+}
+
+.timeline-content h3 {
+    margin: 5px 0; /* Térköz a cím felett és alatt */
+}
+
+.timeline-content p {
+    margin: 0; /* Eltávolítja a margót a leírás körül */
+}
+
+/* SKill bar */
+
+.skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.skill-item {
+    margin: 10px 0; /* Kisebb távolság a készségek között */
+}
+
+.skill-item span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    height: 20px; /* Csík magassága */
+    background-color: #9b6b6b; /* Sötétbarna háttér */
+    border: 1px solid black; /* Sötétbarna keret */
+    border-radius: 5px; /* Lekerekített sarkok */
+    text-align: center; /* Középre igazítja a szöveget */
+    color: white; /* Szöveg színe */
+    line-height: 20px; /* Középre igazítja a szöveget függőlegesen */
+    width: 0%; /* Alapértelmezett szélesség 0, a JS vagy inline stílus állítja be */
+    transition: width 0.5s; /* Animáció a csík betöltéséhez */
+}
+
+
+/* Munkáim szakasz */
+
+#portfolio {
+    padding: 50px 20px; /* Térköz */
+    background-color: #a39797; /* Halvány háttérszín az egész szakasznak */
+    text-align: center; /* Középre igazított szöveg */
+}
+
+.portfolio-container {
+    max-width: 800px; /* Maximális szélesség középen */
+    margin: 0 auto; /* Konténer középre igazítása */
+    display: flex;
+    justify-content: space-around; /* Elemek közötti egyenlő távolság */
+    align-items: flex-start; /* Elemek igazítása függőlegesen */
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    display: block; /* Rugalmas elrendezés az egyes elemeknél */
+    align-items: center; /* Szöveg és ikon egy vonalba helyezése */
+    gap: 15px; /* Térköz a kép és a szöveg között */
+}
+
+.portfolio-item img {
+    width: 60px; /* Kép szélessége */
+    height: 60px; /* Kép magassága */
+    margin-bottom: 10px; /* Kis térköz a szöveg és a kép között */
+}
+
+.portfolio-item p {
+    margin: 0;
+    font-size: 20px; /* Szöveg mérete */
+}
+
+/* Munkatapasztalat */ 
+
+#services {
+    background-color: #977c6e; /* Más háttérszín a szolgáltatások szakasznak */
+    padding: 40px 20px;
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#services p{
+    color: white;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.service-image {
+    flex: 1;
+    max-width: 200px; /* Kép max szélessége */
+}
+
+.service-image img {
+    width: 100%;
+    height: auto; /* Kép arányainak megőrzése */
+}
+
+.service-text {
+    flex: 2;
+    padding-left: 20px; /* Távolság a kép és a szöveg között */
+}
+
+.reversed {
+    flex-direction: row-reverse; /* Váltakozó elrendezés */
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+
+/* Kapcsolat szakasz */
+
+.contact-section {
+    background-color: #b69b9b; /* Más háttérszín */
+    padding: 40px 0;
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto; /* Középre igazítás */
+    text-align: left; /* Balra igazítás */
+    padding: 20px;
+    color: black;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Függőleges elrendezés */
+    gap: 20px; /* Térköz az elemek között */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center; /* Képek és szövegek függőleges igazítása */
+    font-size: 20px;
+}
+
+.contact-icon {
+    margin-right: 15px; /* Térköz az ikon és a szöveg között */
+    width: 30px; /* Ikon szélessége */
+    height: 30px; /* Ikon magassága */
+}
+
+/* Hivatkozások stílusa */
+.contact-item a {
+    text-decoration: none; /* Nincs aláhúzás */
+    color: inherit; /* Szín öröklése */
+    transition: background-color 0.3s; /* Átmenet a háttérszín változásakor */
+}
+
+/* Hivatkozás hover állapot */
+.contact-item a:hover {
+    color: #8B4513; /* Szöveg színe hover állapotban */
+}
+
+/* Gomb stílus */
+#refresh-button {
+    background-color: #6b4f4f; /* A gomb háttérszíne a preferált szín */
+    color: white; /* A gomb szövegének színe */
+    border: none; /* Nincs keret */
+    border-radius: 5px; /* Lekerekített sarkok */
+    padding: 10px 20px; /* Felső és alsó padding, valamint bal és jobb padding */
+    font-size: 18px; /* Gomb betűmérete */
+    cursor: pointer; /* Kéz kurzor a gomb fölé húzva */
+    margin-top: 15px; /* Kisebb hely a kapcsolati adatok alatt */
+    transition: background-color 0.3s ease; /* Átmenet a háttérszín változtatásához */
+}
+
+/* Gomb hover állapot */
+#refresh-button:hover {
+    background-color: #8e6c6c; /* Kicsit világosabb árnyalat hover állapotban */
+}
